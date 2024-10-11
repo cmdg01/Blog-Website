@@ -23,10 +23,7 @@ export default function AboutPage() {
       </div>
 
       <div className="prose lg:prose-xl mb-12">
-        <p>
-          Our Agricultural Blog is dedicated to providing insights, tips, and resources for farmers, gardeners, and anyone interested in sustainable agriculture. 
-          We aim to foster a community that shares knowledge and promotes best practices in farming and gardening.
-        </p>
+      <p>Our Agricultural Blog is dedicated to providing insights, tips, and resources for farmers, gardeners, and anyone interested in sustainable agriculture. We aim to foster a community that shares knowledge and promotes best practices in farming and gardening.</p>
         <p>
           With a focus on organic farming, permaculture, and innovative agricultural techniques, our platform serves as a hub for learning and sharing experiences.
         </p>

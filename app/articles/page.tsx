@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { BlogCardComponent } from '@/components/blog-card';
 import { Button } from '@/components/ui/button';
 import { getArticles } from '@/lib/api';

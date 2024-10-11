@@ -13,7 +13,7 @@ export default async function ArticlePage({ params }: { params: { slug: string }
         <div className="max-w-3xl mx-auto text-center py-20">
           <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>
           <p className="text-xl text-gray-600">
-            Sorry, we couldn't find the article you're looking for.
+            Sorry, we could not find the article you are looking for.
           </p>
         </div>
       );
