@@ -54,13 +54,16 @@ export async function getArticlesByCategory(categorySlug: string): Promise<Artic
   return data as ArticleData[]
 }
 
-export async function getBooks(): Promise<any[]> {
-  if (!supabase) throw new Error('Supabase client not initialized')
+
+export async function getBooks() {
+  if (!supabase) throw new Error('Supabase client not initialized');
+
   const { data, error } = await supabase
     .from('books')
     .select('*')
-    .order('created_at', { ascending: false })
-  
-  if (error) throw error
-  return data
+    .order('created_at', { ascending: false });
+
+  if (error) throw error;
+  return data;
 }
+
