@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Twitter, Facebook, MessageCircle, Instagram } from 'lucide-react';
+import { Twitter, Facebook, Instagram } from 'lucide-react';
 
 export default function ContactPage() {
   return (

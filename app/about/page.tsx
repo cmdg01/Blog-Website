@@ -16,9 +16,9 @@ export default function AboutPage() {
           className="rounded-lg shadow-lg"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex items-center justify-center">
-          <p className="text-white text-2xl font-semibold px-4 text-center">
-            Cultivating knowledge for a sustainable future
-          </p>
+        <p className="text-white text-2xl font-semibold px-4 text-center">
+         Cultivating knowledge for a sustainable future
+        </p>
         </div>
       </div>
 
@@ -34,7 +34,7 @@ export default function AboutPage() {
         </p>
         <h2 className="text-3xl font-semibold mt-6">Join Our Community</h2>
         <p>
-          Whether you're a seasoned farmer or a novice gardener, our blog has something for you. 
+          Whether you are a seasoned farmer or a novice gardener, our blog has something for you. 
           Explore our articles, share your own stories, and connect with others who are passionate about agriculture.
         </p>
       </div>
@@ -51,7 +51,7 @@ export default function AboutPage() {
       <div className="bg-gray-100 p-8 rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold mb-4">Our Values</h2>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {['Sustainability', 'Community', 'Innovation', 'Education'].map((value) => (
+          {["Sustainability", "Community", "Innovation", "Education"].map((value) => (
             <li key={value} className="flex items-center">
               <svg className="w-6 h-6 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
