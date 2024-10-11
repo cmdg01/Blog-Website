@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -6,6 +6,7 @@ import { BlogCardComponent } from '@/components/blog-card';
 import { Button } from '@/components/ui/button';
 import { getArticles } from '@/lib/api';
 import { ArticleListItem } from '@/types/article';
+import Image from 'next/image';
 
 export default function ArticlesPage() {
   const [articles, setArticles] = useState<ArticleListItem[]>([]);
@@ -48,10 +49,11 @@ export default function ArticlesPage() {
             </Button>
           </Link>
         </div>
-        <img
-          src="/hero-agriculture.jpg" // Correct path with leading slash
-          alt="Agricultural Background"
-          className="object-cover w-full h-full"
+        <Image
+        src="/hero-agriculture.jpg"
+        alt="Agricultural Background"
+        fill // Use fill instead of layout="fill"
+        className="object-cover" // This will apply object-fit: cover
         />
       </header>
 

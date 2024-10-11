@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+
 import { getBooks } from '@/lib/api';
 
 export default async function Books() {
