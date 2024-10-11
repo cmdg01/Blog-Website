@@ -38,7 +38,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <header className="relative h-[60vh] overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-8">
-          <h1 className="text-5xl font-bold mb-4">Welcome to Wallace Mukoka's Blog</h1>
+          <h1 className="text-5xl font-bold mb-4">Welcome to Wallace Mukoka&apos;s Blog</h1>
           <p className="mt-4 text-lg">
             Your go-to source for the latest insights, tutorials, and trends in web development, design, and technology.
           </p>
