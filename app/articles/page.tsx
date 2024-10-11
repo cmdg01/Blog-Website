@@ -1,13 +1,14 @@
-'use client';
+'use client'
 
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import { BlogCardComponent } from '@/components/blog-card';
+import { Button } from '@/components/ui/button';
 import { getArticles } from '@/lib/api';
 import { ArticleListItem } from '@/types/article';
 
-export default function HomePage() {
+export default function ArticlesPage() {
   const [articles, setArticles] = useState<ArticleListItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -38,9 +39,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <header className="relative h-[60vh] overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-8">
-          <h1 className="text-5xl font-bold mb-4">Welcome to Wallace Mukoka's Blog</h1>
+          <h1 className="text-5xl font-bold mb-4">Welcome to Wallace Mukoka</h1>
           <p className="mt-4 text-lg">
-            Your go-to source for the latest insights, tutorials, and trends in web development, design, and technology.
+            Your go-to source for the latest insights, tutorials, and trends in sustainable agriculture, gardening, and farming practices.
           </p>
           <Link href="#featured-articles">
             <Button size="lg" className="bg-green-600 text-white hover:bg-green-700 mt-4">
@@ -49,15 +50,15 @@ export default function HomePage() {
           </Link>
         </div>
         <img
-           src="/hero-agriculture.jpg" // Correct path with leading slash
-           alt="Agricultural Background"
+          src="/hero-agriculture.jpg" // Correct path with leading slash
+          alt="Agricultural Background"
           className="object-cover w-full h-full"
         />
       </header>
 
       {/* Featured Articles Section */}
       <section className="py-12">
-        <h2 className="text-3xl font-bold text-center mb-6">Featured Articles</h2>
+        <h2 className="text-3xl font-bold text-center mb-6">Motivational Articles</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredArticles.map((article) => (
             <Link key={article.id} href={`/articles/${article.slug}`}>
