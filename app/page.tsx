@@ -7,6 +7,7 @@ import { BlogCardComponent } from '@/components/blog-card';
 import { getArticles } from '@/lib/api';
 import { ArticleListItem } from '@/types/article';
 
+
 export default function HomePage() {
   const [articles, setArticles] = useState<ArticleListItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
