@@ -31,16 +31,7 @@ export async function getArticleBySlug(slug: string): Promise<Pick<ArticleData, 
   return data;
 }
 
-export async function getCategories(): Promise<{ id: number; name: string; slug: string }[]> {
-  if (!supabase) throw new Error('Supabase client not initialized')
-  const { data, error } = await supabase
-    .from('categories')
-    .select('*')
-    .order('name', { ascending: true })
-  
-  if (error) throw error
-  return data
-}
+
 
 export async function getArticlesByCategory(categorySlug: string): Promise<ArticleData[]> {
   if (!supabase) throw new Error('Supabase client not initialized')
