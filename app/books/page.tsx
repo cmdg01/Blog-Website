@@ -1,4 +1,6 @@
-import { GetStaticProps } from 'next';
+'use client';
+
+import { useState, useEffect } from 'react';
 import { getBooks } from '@/lib/api';
 
 type Book = {
@@ -9,34 +11,34 @@ type Book = {
   cover_image: string;
 };
 
-interface BooksProps {
-  books: Book[];
-}
+export default function Books() {
+  const [books, setBooks] = useState<Book[]>([]);
+  const [loading, setLoading] = useState(true);
 
-export const getStaticProps: GetStaticProps<BooksProps> = async () => {
-  try {
-    const books = await getBooks();
-    return {
-      props: {
-        books,
-      },
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const booksData = await getBooks();
+        setBooks(booksData);
+      } catch (error) {
+        console.error('Error fetching books:', error);
+      } finally {
+        setLoading(false);
+      }
     };
-  } catch (error) {
-    console.error('Error fetching books:', error);
-    return {
-      props: {
-        books: [],
-      },
-    };
-  }
-};
 
-export default function Books({ books }: BooksProps) {
+    fetchBooks();
+  }, []);
+
   const handleDownload = (bookId: string) => {
     const downloadLink = 'https://drive.google.com/file/d/15B_RTlWv-Qog4DwArGBKUcIyzCpKpOML/view?usp=drivesdk';
     console.log(`Downloading book with ID: ${bookId}`);
     window.open(downloadLink, '_blank');
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">
