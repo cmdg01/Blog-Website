@@ -1,15 +1,40 @@
-'use client';
-
-
+import { GetStaticProps } from 'next';
 import { getBooks } from '@/lib/api';
 
-export default async function Books() {
-  const books = await getBooks();
+type Book = {
+  id: string;
+  title: string;
+  author: string;
+  description: string;
+  cover_image: string;
+};
 
+interface BooksProps {
+  books: Book[];
+}
+
+export const getStaticProps: GetStaticProps<BooksProps> = async () => {
+  try {
+    const books = await getBooks();
+    return {
+      props: {
+        books,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching books:', error);
+    return {
+      props: {
+        books: [],
+      },
+    };
+  }
+};
+
+export default function Books({ books }: BooksProps) {
   const handleDownload = (bookId: string) => {
-    const downloadLink = "https://drive.google.com/file/d/15B_RTlWv-Qog4DwArGBKUcIyzCpKpOML/view?usp=drivesdk";
+    const downloadLink = 'https://drive.google.com/file/d/15B_RTlWv-Qog4DwArGBKUcIyzCpKpOML/view?usp=drivesdk';
     console.log(`Downloading book with ID: ${bookId}`);
-    // Redirect to the download link
     window.open(downloadLink, '_blank');
   };
 
