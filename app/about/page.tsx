@@ -42,7 +42,7 @@ export default function AboutPage() {
 
         <h2 className="text-3xl font-semibold mt-6">Join Our Community</h2>
         <p>
-          Whether you're a seasoned farmer, a novice gardener, or someone seeking personal growth and motivation, 
+          Whether you&apos;re a seasoned farmer, a novice gardener, or someone seeking personal growth and motivation, 
           our blog has something for you. Explore our articles, share your own stories, and connect with others 
           who are passionate about agriculture and personal development.
         </p>
