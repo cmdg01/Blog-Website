@@ -104,7 +104,7 @@ export default function HomePage() {
             <Link key={article.id} href={`/articles/${article.slug}`}>
               <BlogCardComponent
                 imageUrl={article.image_url || '/placeholder.svg?height=300&width=400'}
-                category={article.category}
+              
                 title={article.title}
                 date={new Date(article.created_at).toLocaleDateString()}
               />
@@ -121,7 +121,7 @@ export default function HomePage() {
             <Link key={article.id} href={`/articles/${article.slug}`}>
               <BlogCardComponent
                 imageUrl={article.image_url || '/placeholder.svg?height=300&width=400'}
-                category={article.category}
+            
                 title={article.title}
                 date={new Date(article.created_at).toLocaleDateString()}
               />

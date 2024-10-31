@@ -79,7 +79,6 @@ export default function HomePage() {
           <h1 className="text-5xl font-bold mb-4">Welcome to Wallace Mukoka&apos;s Blog</h1>
           <p className="mt-4 text-lg">
             Cultivating knowledge and sharing sustainable farming practices for a better tomorrow. 
-  
           </p>
           <Link href="#featured-articles">
             <Button size="lg" className="bg-green-600 text-white hover:bg-green-700 mt-4">
@@ -102,7 +101,6 @@ export default function HomePage() {
             <Link key={article.id} href={`/articles/${article.slug}`}>
               <BlogCardComponent
                 imageUrl={article.image_url || '/placeholder.svg?height=300&width=400'}
-                category={article.category}
                 title={article.title}
                 date={new Date(article.created_at).toLocaleDateString()}
               />
@@ -119,7 +117,6 @@ export default function HomePage() {
             <Link key={article.id} href={`/articles/${article.slug}`}>
               <BlogCardComponent
                 imageUrl={article.image_url || '/placeholder.svg?height=300&width=400'}
-                category={article.category}
                 title={article.title}
                 date={new Date(article.created_at).toLocaleDateString()}
               />

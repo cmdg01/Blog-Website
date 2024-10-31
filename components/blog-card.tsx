@@ -4,14 +4,12 @@ import Image from 'next/image';
 
 interface BlogCardProps {
   imageUrl: string;
-  category: string;
   title: string;
   date: string;
 }
 
 export function BlogCardComponent({ 
   imageUrl = '/placeholder.svg?height=300&width=400', 
-  category = 'CATEGORY', 
   title = 'Your Captivating Article Title Goes Here', 
   date = 'January 1, 2023' 
 }: BlogCardProps) {
@@ -28,7 +26,6 @@ export function BlogCardComponent({
         <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 hover:opacity-100" />
       </div>
       <div className="p-6 bg-white bg-opacity-80 backdrop-blur-sm transition-all duration-300 hover:bg-opacity-90 hover:bg-green-50 flex-grow">
-  
         <p className="text-gray-900 text-lg font-semibold mb-2">{title}</p>
         <p className="text-gray-600 text-sm">{date}</p>
       </div>
