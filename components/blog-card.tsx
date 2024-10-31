@@ -28,7 +28,6 @@ export function BlogCardComponent({
         <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 hover:opacity-100" />
       </div>
       <div className="p-6 bg-white bg-opacity-80 backdrop-blur-sm transition-all duration-300 hover:bg-opacity-90 hover:bg-green-50 flex-grow">
-        <div className="font-bold text-xl mb-2 text-gray-700">{category}</div>
         <p className="text-gray-900 text-lg font-semibold mb-2">{title}</p>
         <p className="text-gray-600 text-sm">{date}</p>
       </div>
