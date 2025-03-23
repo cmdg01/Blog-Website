@@ -31,7 +31,7 @@ export default function Books() {
   }, []);
 
   const handleDownload = (bookId: string) => {
-    const downloadLink = 'https://drive.google.com/file/d/15B_RTlWv-Qog4DwArGBKUcIyzCpKpOML/view?usp=drivesdk';
+    const downloadLink = 'https://drive.google.com/file/d/1yJvf6eXx7f_oRkyE_IUYtfxshw_gfNzf/view?usp=drivesdk';
     console.log(`Downloading book with ID: ${bookId}`);
     window.open(downloadLink, '_blank');
   };
